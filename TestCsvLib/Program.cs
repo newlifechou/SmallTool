@@ -9,7 +9,10 @@ namespace TestCsvLib
     {
         static void Main(string[] args)
         {
+            CsvHelperTest tester = new CsvHelperTest();
+            tester.TestWriteRecord();
 
+            Console.Read();
         }
     }
 }
