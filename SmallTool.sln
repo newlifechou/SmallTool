@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shibor", "Shibor\Shibor.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpeakIt", "SpeakIt\SpeakIt.csproj", "{86D1CF26-6543-4437-B759-74BD1BB3A5EC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCsvLib", "TestCsvLib\TestCsvLib.csproj", "{F3B85FE9-F999-4FDE-96A3-D0CF84DF05D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{86D1CF26-6543-4437-B759-74BD1BB3A5EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86D1CF26-6543-4437-B759-74BD1BB3A5EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86D1CF26-6543-4437-B759-74BD1BB3A5EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3B85FE9-F999-4FDE-96A3-D0CF84DF05D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3B85FE9-F999-4FDE-96A3-D0CF84DF05D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3B85FE9-F999-4FDE-96A3-D0CF84DF05D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3B85FE9-F999-4FDE-96A3-D0CF84DF05D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
