@@ -10,12 +10,34 @@ namespace TestCsvLib
     public class CsvHelperTest
     {
         private string dataForRead;
+        private string dataForRead2;
         private string dataForWrite;
         public CsvHelperTest()
         {
             dataForRead = Path.Combine(Environment.CurrentDirectory, "dataForRead.csv");
+            dataForRead2 = Path.Combine(Environment.CurrentDirectory, "dataForRead2.csv");
             dataForWrite = Path.Combine(Environment.CurrentDirectory, "dataForWrite.csv");
         }
+        public void TestWriteWithMapping()
+        {
+
+            var sr = new StreamReader(dataForRead2);
+            var csv = new CsvReader(sr);
+            csv.Configuration.RegisterClassMap<PersonMap>();
+            csv.Configuration.HeaderValidated = null;
+            var result = csv.GetRecords<Person>();
+            foreach (var item in result)
+            {
+                Console.WriteLine(item.Name);
+                Console.WriteLine(item.Age);
+                Console.WriteLine(item.Language);
+            }
+
+
+
+            csv.Dispose();
+        }
+
         public void TestWriteRecord()
         {
             var persons = new List<Person>();
@@ -23,11 +45,25 @@ namespace TestCsvLib
             {
                 persons.Add(new Person { Name = "peter" + i, Age = 22 + i, Language = "C#" + i });
             }
-            FileStream fs = new FileStream(dataForWrite, FileMode.Append);
+            if (File.Exists(dataForWrite)) File.Delete(dataForWrite);
+            FileStream fs = new FileStream(dataForWrite, FileMode.CreateNew);
             var csv = new CsvWriter(new StreamWriter(fs));
             csv.WriteRecords(persons);
             Console.WriteLine("写入完毕");
-            fs.Flush();
+            csv.Dispose();
+
+            //Person p = new Person { Name = "jack", Age = 22, Language = "TypeScript" };
+            //if (File.Exists(dataForWrite))
+            //{
+            //    File.Delete(dataForWrite);
+            //}
+            //FileStream fs = new FileStream(dataForWrite, FileMode.CreateNew);
+            //var csv = new CsvWriter(new StreamWriter(fs));
+            //csv.WriteHeader(typeof(Person));
+            //csv.NextRecord();
+            //csv.WriteRecord<Person>(p);
+            //csv.NextRecord();
+            //csv.Dispose();
         }
         public void TestReadRecord()
         {

@@ -10,8 +10,14 @@ namespace TestCsvLib
         static void Main(string[] args)
         {
             CsvHelperTest tester = new CsvHelperTest();
-            tester.TestWriteRecord();
+            tester.TestWriteWithMapping();
+            //tester.TestWriteRecord();
 
+
+
+
+            Console.WriteLine("执行完毕");
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory);
             Console.Read();
         }
     }
