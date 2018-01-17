@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using System.Threading;
+using System.Diagnostics;
 
 namespace GiantTextFileGenerator
 {
@@ -21,8 +22,7 @@ namespace GiantTextFileGenerator
         {
             var fs = new FileStream(dataFilePath, FileMode.Append);
             var sw = new StreamWriter(fs);
-          
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 Task t = new Task(() =>
                 {
