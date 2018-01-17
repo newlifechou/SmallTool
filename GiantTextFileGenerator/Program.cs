@@ -16,18 +16,24 @@ namespace GiantTextFileGenerator
         static void Main()
         {
             Console.WriteLine("开始启动线程写入GUID到文件");
-            int m, n = 0;
-            ThreadPool.GetMaxThreads(out m, out n);
-            Debug.Print($"之前{m}-{n}");
 
-            MassOperation operate = new MassOperation();
+            MassOperation operate = new MassOperation() { TaskCount = 10 };
             Task.Factory.StartNew(() => operate.WriteMassDataIntoFile());
 
-            ThreadPool.GetMaxThreads(out m, out n);
-
+            Console.WriteLine("执行主线程任务开始");
             Thread.Sleep(5000);
-            Debug.Print($"之后{m}-{n}");
+            Console.WriteLine("执行主线程任务结束");
 
+            Console.WriteLine("使用q退出循环");
+
+            while (Console.ReadLine() != "q")
+            {
+                Console.WriteLine("输入无效");
+            }
+            operate.CancelSource.Cancel();
+            operate.CloseSW();
+
+            Console.WriteLine("程序结束");
             Console.Read();
         }
     }
