@@ -22,7 +22,7 @@ namespace GaintDBGenerator
             rand = new Random();
             sqlconstr = ConfigurationManager.ConnectionStrings["servertwo"].ConnectionString;
             cancelSource = new CancellationTokenSource();
-            threadCount = 3;
+            threadCount = 10;
         }
 
         public CancellationTokenSource CancelSource
