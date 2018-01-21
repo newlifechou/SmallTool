@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2008
+VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shibor", "Shibor\Shibor.csproj", "{AB137FD4-FF47-4839-B635-FE9D95F151E6}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiantTextFileGenerator", "GiantTextFileGenerator\GiantTextFileGenerator.csproj", "{E83F3E42-C3BE-4CF8-A981-D2010B530C3D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaintDBGenerator", "GaintDBGenerator\GaintDBGenerator.csproj", "{8CA627D5-1B67-428F-86F8-46368B438009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormalDataGenerator", "NormalDataGenerator\NormalDataGenerator.csproj", "{6263F903-E1CF-46F8-903B-B474473FCCF3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{8CA627D5-1B67-428F-86F8-46368B438009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CA627D5-1B67-428F-86F8-46368B438009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CA627D5-1B67-428F-86F8-46368B438009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6263F903-E1CF-46F8-903B-B474473FCCF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6263F903-E1CF-46F8-903B-B474473FCCF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6263F903-E1CF-46F8-903B-B474473FCCF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6263F903-E1CF-46F8-903B-B474473FCCF3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
