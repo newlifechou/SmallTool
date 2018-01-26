@@ -49,9 +49,12 @@ namespace WhatShouldIEat
             return foods;
         }
 
-        public Food GetSingleRandomFood(string character, double priceLessThan)
+        public Food GetSingleRandomFood()
         {
-            throw new NotImplementedException();
+            Random r = new Random();
+            int max = foods.Count;
+            int randIndex = r.Next(0, max - 1);
+            return foods[randIndex];
         }
         #endregion
 
@@ -83,6 +86,11 @@ namespace WhatShouldIEat
         {
             string jsonContent = JsonConvert.SerializeObject(foods);
             File.WriteAllText(jsonFile, jsonContent);
+        }
+
+        public void SaveAsHistory()
+        {
+
         }
 
         #endregion
