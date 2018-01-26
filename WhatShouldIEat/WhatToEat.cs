@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
+using Newtonsoft.Json;
+
 
 namespace WhatShouldIEat
 {
@@ -11,30 +14,77 @@ namespace WhatShouldIEat
     /// 这个类用来提供按条件选择食物的功能
     /// 并提供自定义需求
     /// </summary>
-    class WhatToEat
+    public class WhatToEat
     {
         private List<Food> foods;
+        private string jsonFile;
         public WhatToEat()
         {
-            foods = new List<Food>();
+            jsonFile = Path.Combine(Directory.GetCurrentDirectory(), "foods.json");
+            LoadFoodsFromJsonFile();
+        }
+
+        /// <summary>
+        /// 类外设置JsonFile路径
+        /// </summary>
+        public string JsonFile
+        {
+            set
+            {
+                jsonFile = value;
+            }
         }
 
 
-        public int AddFood(Food food)
+        #region 获取
+        private void LoadFoodsFromJsonFile()
+        {
+            string jsonContent = File.ReadAllText(jsonFile);
+            foods = JsonConvert.DeserializeObject<List<Food>>(jsonContent);
+        }
+
+        public List<Food> GetAllFoods()
+        {
+            LoadFoodsFromJsonFile();
+            return foods;
+        }
+
+        public Food GetSingleRandomFood(string character, double priceLessThan)
         {
             throw new NotImplementedException();
         }
+        #endregion
 
-        public int UpdateFood(Food food)
+        #region 操作List<Food>
+        public void AddFood(Food food)
         {
-            throw new NotImplementedException();
+            if (foods != null)
+            {
+                foods.Add(food);
+            }
         }
 
-        public int DeleteFood(int id)
+        public void UpdateFood(Food food)
         {
-            throw new NotImplementedException();
+            if (foods == null) return;
+            var currentFood = foods.Find(f => f.Name == food.Name);
+            currentFood.Price = food.Price;
+            currentFood.Characteristic = food.Characteristic;
         }
 
+        public void DeleteFood(string foodName)
+        {
+            if (foods == null) return;
+            var food = foods.Find(f => f.Name == foodName);
+            foods.Remove(food);
+        }
 
+        public void SaveFoodList()
+        {
+            string jsonContent = JsonConvert.SerializeObject(foods);
+            File.WriteAllText(jsonFile, jsonContent);
+        }
+
+        #endregion
     }
 }
