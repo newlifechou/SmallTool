@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GiantTextFileGenerator", "G
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GaintDBGenerator", "GaintDBGenerator\GaintDBGenerator.csproj", "{8CA627D5-1B67-428F-86F8-46368B438009}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatShouldIEat", "WhatShouldIEat\WhatShouldIEat.csproj", "{6C53DAE6-DB45-4D3C-9CFB-D67B98721724}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{8CA627D5-1B67-428F-86F8-46368B438009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CA627D5-1B67-428F-86F8-46368B438009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CA627D5-1B67-428F-86F8-46368B438009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C53DAE6-DB45-4D3C-9CFB-D67B98721724}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C53DAE6-DB45-4D3C-9CFB-D67B98721724}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C53DAE6-DB45-4D3C-9CFB-D67B98721724}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C53DAE6-DB45-4D3C-9CFB-D67B98721724}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
