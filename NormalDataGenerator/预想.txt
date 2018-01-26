@@ -1,0 +1,9 @@
+﻿能够生成
+各类试验数据
+学生-课程-老师
+
+客户-订单-产品
+到
+数据库（sqlserver,sqlite,mysql,access）
+文件（csv,xlsx,xml,html,json）
+控制台
