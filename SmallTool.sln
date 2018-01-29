@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhatShouldIEatTests", "What
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleLottery", "SimpleLottery\SimpleLottery.csproj", "{863DE942-7BC9-4720-8108-33F1568FF995}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChoiceQuestion", "ChoiceQuestion\ChoiceQuestion.csproj", "{39294672-0B5B-4299-AA9A-7ED63163358E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopOnLine", "ShopOnLine\ShopOnLine.csproj", "{37817C6B-9C08-446F-A96B-87D40D2EF548}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{863DE942-7BC9-4720-8108-33F1568FF995}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{863DE942-7BC9-4720-8108-33F1568FF995}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{863DE942-7BC9-4720-8108-33F1568FF995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39294672-0B5B-4299-AA9A-7ED63163358E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39294672-0B5B-4299-AA9A-7ED63163358E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39294672-0B5B-4299-AA9A-7ED63163358E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39294672-0B5B-4299-AA9A-7ED63163358E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37817C6B-9C08-446F-A96B-87D40D2EF548}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37817C6B-9C08-446F-A96B-87D40D2EF548}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37817C6B-9C08-446F-A96B-87D40D2EF548}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37817C6B-9C08-446F-A96B-87D40D2EF548}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{863DE942-7BC9-4720-8108-33F1568FF995}</ProjectGuid>
+    <ProjectGuid>{37817C6B-9C08-446F-A96B-87D40D2EF548}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SimpleLottery</RootNamespace>
-    <AssemblyName>SimpleLottery</AssemblyName>
+    <RootNamespace>ShopOnLine</RootNamespace>
+    <AssemblyName>ShopOnLine</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,16 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoubleColor.cs" />
-    <Compile Include="ILottery.cs" />
-    <Compile Include="Model\Lottery.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ReadMe.md" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
