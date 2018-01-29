@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleLottery
+namespace Dice
 {
-    public interface ILottery
+    class Program
     {
-        IList<ILottery>
+        static void Main(string[] args)
+        {
+        }
     }
 }

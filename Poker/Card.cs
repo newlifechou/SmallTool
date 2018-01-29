@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SimpleLottery.Model
+namespace Poker
 {
-    public class Lottery
+    public class Card
     {
-        
+        public int Id { get; set; }
+        public string CardName { get; set; }
     }
 }

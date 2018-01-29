@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{863DE942-7BC9-4720-8108-33F1568FF995}</ProjectGuid>
+    <ProjectGuid>{2353DBA8-92BD-4DF6-A4E3-78497E72A196}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SimpleLottery</RootNamespace>
-    <AssemblyName>SimpleLottery</AssemblyName>
+    <RootNamespace>Dice</RootNamespace>
+    <AssemblyName>Dice</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,18 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoubleColorLottery.cs" />
-    <Compile Include="DoubleColorLotteryFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UniqueRandomInteger.cs" />
-    <Compile Include="UnrepeatRandomNumber.cs" />
-    <Compile Include="UnRepeatRandomNumberTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ReadMe.md" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

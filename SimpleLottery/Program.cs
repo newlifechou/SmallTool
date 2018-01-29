@@ -10,6 +10,9 @@ namespace SimpleLottery
     {
         static void Main(string[] args)
         {
+            new UnRepeatRandomNumberTest().Test01();
+
+            Console.Read();
         }
     }
 }
