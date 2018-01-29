@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 namespace WhatShouldIEat
 {
     /// <summary>
-    /// 食物特征
+    /// 食物类型
     /// </summary>
-    public class FoodCharacteristic
+    public class FoodCategory
     {
         public int Id { get; set; }
-        public string CharacteristicName { get; set; }
+        public string CategoryName { get; set; }
     }
 }
