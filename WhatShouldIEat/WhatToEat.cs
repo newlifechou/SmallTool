@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using Newtonsoft.Json;
 
 
 namespace WhatShouldIEat
@@ -16,83 +15,35 @@ namespace WhatShouldIEat
     /// </summary>
     public class WhatToEat
     {
-        private List<Food> foods;
-        private string jsonFile;
         public WhatToEat()
         {
-            jsonFile = Path.Combine(Directory.GetCurrentDirectory(), "foods.json");
-            LoadFoodsFromJsonFile();
+            rand = new Random();
+            Foods = new List<Food>();
+            FoodCategories = new List<FoodCategory>();
+            FoodCharacteristics = new List<FoodCharacteristic>();
         }
 
-        /// <summary>
-        /// 类外设置JsonFile路径
-        /// </summary>
-        public string JsonFile
+        public List<Food> Foods { get; set; }
+        public List<FoodCategory> FoodCategories { get; set; }
+        public List<FoodCharacteristic> FoodCharacteristics { get; set; }
+
+        private Random rand;
+
+        public Food GetFood()
         {
-            set
+            if (Foods.Count == 0)
             {
-                jsonFile = value;
+                throw new ApplicationException("Foods集合为空");
             }
+            return Foods[rand.Next(0, Foods.Count - 1)];
         }
 
-
-        #region 获取
-        private void LoadFoodsFromJsonFile()
-        {
-            string jsonContent = File.ReadAllText(jsonFile);
-            foods = JsonConvert.DeserializeObject<List<Food>>(jsonContent);
-        }
-
-        public List<Food> GetAllFoods()
-        {
-            LoadFoodsFromJsonFile();
-            return foods;
-        }
-
-        public Food GetSingleRandomFood()
-        {
-            Random r = new Random();
-            int max = foods.Count;
-            int randIndex = r.Next(0, max - 1);
-            return foods[randIndex];
-        }
-        #endregion
-
-        #region 操作List<Food>
-        public void AddFood(Food food)
-        {
-            if (foods != null)
-            {
-                foods.Add(food);
-            }
-        }
-
-        public void UpdateFood(Food food)
-        {
-            if (foods == null) return;
-            var currentFood = foods.Find(f => f.Name == food.Name);
-            currentFood.Price = food.Price;
-            currentFood.Characteristic = food.Characteristic;
-        }
-
-        public void DeleteFood(string foodName)
-        {
-            if (foods == null) return;
-            var food = foods.Find(f => f.Name == foodName);
-            foods.Remove(food);
-        }
-
-        public void SaveFoodList()
-        {
-            string jsonContent = JsonConvert.SerializeObject(foods);
-            File.WriteAllText(jsonFile, jsonContent);
-        }
-
-        public void SaveAsHistory()
+        public Food GetFood(string category, string character)
         {
 
+            return null;
         }
 
-        #endregion
+
     }
 }
