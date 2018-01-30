@@ -10,6 +10,12 @@ namespace Dice
     {
         static void Main(string[] args)
         {
+            SimpleDice myDice = new SimpleDice();
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(myDice.Dice());
+            }
+            Console.Read();
         }
     }
 }
