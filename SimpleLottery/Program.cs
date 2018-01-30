@@ -10,8 +10,15 @@ namespace SimpleLottery
     {
         static void Main(string[] args)
         {
-            new UnRepeatRandomNumberTest().Test01();
-
+            var t = new UnrepeatRandomNumber();
+            for (int i = 0; i < 5; i++)
+            {
+                t.GetPartRandomArray(10, 20).ToList().ForEach(k =>
+                {
+                    Console.Write($"{k} ");
+                });
+                Console.WriteLine();
+            }
             Console.Read();
         }
     }

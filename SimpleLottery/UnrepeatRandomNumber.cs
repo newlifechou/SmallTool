@@ -62,5 +62,33 @@ namespace SimpleLottery
             b = tmp;
         }
 
+
+        /// <summary>
+        /// 从更大的范围选择一部分不重复的随机数
+        /// </summary>
+        /// <param name="count"></param>
+        /// <param name="countReady"></param>
+        /// <returns></returns>
+        public int[] GetPartRandomArray(int countWant, int countReady)
+        {
+            int[] data = new int[countWant];
+            int[] position = new int[countReady];
+            for (int i = 0; i < countReady; i++)
+            {
+                position[i] = i;
+            }
+
+            for (int i = 0; i < countWant; i++)
+            {
+                int randPosition = 0;
+                do
+                {
+                    randPosition = rand.Next(0, countReady);
+                } while (position[randPosition] == -1);
+                data[i] = randPosition;
+                position[randPosition] = -1;
+            }
+            return data;
+        }
     }
 }
