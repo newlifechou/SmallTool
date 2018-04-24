@@ -10,7 +10,11 @@ namespace Shibor
     {
         static void Main(string[] args)
         {
+            Task task = new Task(new ShiborLib().DownloadTask);
+            task.Start();
 
+            Console.WriteLine("主程序运行");
+            Console.Read();
         }
     }
 }
