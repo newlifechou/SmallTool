@@ -61,7 +61,7 @@ namespace Shibor
         }
         public void DownloadTask()
         {
-            BatchDownLoad(new DateTime(2018, 1, 1), new DateTime(2018, 4, 25));
+            BatchDownLoad(new DateTime(2016, 1, 1), new DateTime(2018, 4, 25));
             Console.WriteLine("Shibor任务结束");
         }
 
